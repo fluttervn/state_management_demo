@@ -5,7 +5,7 @@ import 'package:state_management_demo/isolate_tasks/worker/worker.dart';
 import 'package:state_management_demo/models/todo_model.dart';
 
 class Tab2Bloc extends ChangeNotifier {
-  var todoModel;
+  TodoModel todoModel;
   bool loading = false;
   int count = 0;
 
