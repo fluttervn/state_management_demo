@@ -6,9 +6,9 @@ import 'package:state_management_demo/isolate_tasks/worker/worker.dart';
 import 'package:state_management_demo/models/todo_model.dart';
 
 class Tab3Bloc {
-  var todoModel;
-  FlStreamController loadingStreamCtrl = FlStreamController<bool>();
-  FlStreamController countStreamCtrl = FlStreamController<int>();
+  TodoModel todoModel;
+  FlStreamController<bool> loadingStreamCtrl = FlStreamController();
+  FlStreamController<int> countStreamCtrl = FlStreamController();
   int _count = 0;
 
   Future getTodoData() async {
@@ -29,7 +29,7 @@ class FlStreamController<T> {
   T _prevData;
 
   // Stream of data T to notify the T data change
-  StreamController _dataController = StreamController<T>.broadcast();
+  final StreamController<T> _dataController = StreamController.broadcast();
 
   Stream<T> get dataStream => _dataController.stream;
 
