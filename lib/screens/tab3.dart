@@ -43,7 +43,7 @@ class TodoWidget extends StatelessWidget {
 
     var bloc = Provider.of<Tab3Bloc>(context, listen: false);
     return StreamBuilder<bool>(
-        stream: bloc.loadingStreamCtrl.dataStream,
+        stream: bloc.loadingStreamController.dataStream,
         initialData: false,
         builder: (context, snapshot) {
           var loading = snapshot.data;
@@ -68,7 +68,7 @@ class CounterWidget extends StatelessWidget {
     print('build CounterWidget');
     var bloc = Provider.of<Tab3Bloc>(context, listen: false);
     return StreamBuilder<int>(
-        stream: bloc.countStreamCtrl.dataStream,
+        stream: bloc.countStreamController.dataStream,
         initialData: 0,
         builder: (context, snapshot) {
           return Text('${snapshot.data}');

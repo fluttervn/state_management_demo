@@ -1,16 +1,19 @@
 # state_management_demo
 
+[![Build Status](https://travis-ci.org/fluttervn/state_management_demo.svg?branch=master)](https://travis-ci.org/fluttervn/state_management_demo)
+
 A demo for state management of Flutter application using Provider and StreamBuilder.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+There are 3 tabs in the demo:
 
-A few resources to get you started if this is your first Flutter project:
+- Tab1: Using ChangeNotifierProvider to notify value to widgets.
+- Tab2: Show issue of ChangeNotifierProvider when using multi-value
+- Tab3: Solve Tab2's problem by using StreamBuilder.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Please refer to [my post on Medium](https://medium.com/fluttervn/simplify-flutter-state-management-with-provider-and-bloc-dcfad49bedf2) to get explain more details
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Authors
+- [anlam87](https://github.com/anlam87) (anlam12787@gmail.com)
+

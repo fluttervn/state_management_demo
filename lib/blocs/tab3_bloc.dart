@@ -7,21 +7,21 @@ import 'package:state_management_demo/models/todo_model.dart';
 
 class Tab3Bloc {
   TodoModel todoModel;
-  FlStreamController<bool> loadingStreamCtrl = FlStreamController();
-  FlStreamController<int> countStreamCtrl = FlStreamController();
+  FlStreamController<bool> loadingStreamController = FlStreamController();
+  FlStreamController<int> countStreamController = FlStreamController();
   int _count = 0;
 
   Future getTodoData() async {
     final dio = Dio();
     var todoTask = GetTodoTask(dio: dio, id: 1);
     final worker = Worker(poolSize: 2);
-    loadingStreamCtrl.setData(true);
+    loadingStreamController.setData(true);
     todoModel = (await worker.handle(todoTask)) as TodoModel;
-    loadingStreamCtrl.setData(false);
+    loadingStreamController.setData(false);
   }
 
   void increaseCount() {
-    countStreamCtrl.setData(_count++);
+    countStreamController.setData(_count++);
   }
 }
 
